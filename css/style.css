@@ -1,0 +1,177 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: #fff;
+}
+
+.navbar{
+	margin-bottom: 1rem;
+	border-bottom: 1px solid #aaa;
+}
+.navbar-nav a:hover{
+   transform: translateY(-1px);
+   font-weight: 500;
+}
+/*********************************************/
+.carousel-inner{
+	width: 90%;
+	margin: 0 auto;
+	max-height: 500px !important;
+	
+}
+
+.carousel-item img{
+	background-position: center;
+	background-size: cover;
+	max-height: 500px !important;
+}
+/*****************************************/
+
+.wrapper{
+
+	width: 90%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	margin: 0 auto;
+}
+.item{
+	border-right: 1px solid #aaa;
+	background: grey;
+	color: #fff;
+	align-items: center;
+	text-align: center;
+	padding: 1rem 1rem;
+	cursor: pointer;
+	position: relative;
+}
+.item .details{
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	padding: .35rem .5rem;
+	transform: translateY(-50px);
+	transition: 0.3s;
+	overflow-y: hidden;
+
+}
+.item:hover{
+	background-color: #aaa;
+}
+.item:hover .details{
+    opacity: 1;
+    transform: translateY(-100px);
+    z-index: 99;
+}
+.item img{
+     width: 40px;
+     height: 35px;
+     background-position: center;
+     background-size: cover;
+}
+
+footer{
+	margin-top: 4rem;
+
+
+}
+
+
+/******************************************************/
+.introduction{
+	margin-top: 4rem;
+	justify-content: center;
+	align-items: center;
+	text-align:center;
+}
+
+.container-section{
+	max-width: 1120px;
+	margin: 3rem auto;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	transform-style: preserve-3d;
+}
+.container-section .room{
+	position: relative;
+	width: 350px;
+	height: 300px;
+	background: #fff;
+	margin: auto .5rem;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+	transition: 0.5s;
+	overflow: hidden;
+	transform-style: preserve-3d;
+	margin: 1rem auto;
+}
+.container-section .room .img-box{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.container-section .room img{
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+}
+
+.container-section .room .content{
+	position: absolute;
+	width: 90%;
+	height: 100%;
+	top: 150%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	transition: .7s;
+	background: rgba(0,0,0,0.8);
+	color: #fff;
+	padding: 1rem 1rem;
+}
+.container-section .room:hover .content{
+   top: 60%;
+   padding: 1.5rem 1.5rem;
+}
+
+.container-section:hover .room{
+	transform: perspective(500px) rotateY(20deg);
+}
+.container-section .room:hover{
+    transform: perspective(500px) rotateY(0deg);	
+}
+.container-section .room:hover ~.room{
+	transform: perspective(500px) rotateY(-20deg);
+}
+
+/*******************************************************/
+
+
+
+/******************************************************/
+@media only screen and (max-width: 600px) {
+	.item .details{
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	padding: .35rem .5rem;
+	transform: translateY(-120px);
+	transition: 0.3s;
+	overflow-y: hidden;
+
+}
+	.item:hover .details{
+    opacity: 1;
+    transform: translateY(-220px);
+    z-index: 99;
+}
+}
+
+

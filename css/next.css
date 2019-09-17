@@ -1,0 +1,283 @@
+body{
+	margin: 0;
+	padding: 0;
+
+}
+.container{
+	margin: 3rem auto;
+}
+.box{
+    position: relative;
+    height: 300px;	
+    margin: 1rem auto;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	overflow: hidden;
+	box-shadow: .1rem .5rem .8rem rgba(0,0,0,0.6);
+    animation: moveTop 1s ease-in-out forwards;
+    opacity: 0;	
+}
+@keyframes moveTop{
+    0%{
+    	transform: translateY(20px);
+    	opacity: 0;
+    }
+    100%{
+    	transform: translateY(0);
+    	opacity: 1;
+    }
+}
+
+
+
+.box .text-box{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width : 100%;
+    color: #fff;
+	height: 100%;
+    background: transparent;
+    
+}
+
+.text{
+	position: absolute;
+	top: 45%;
+	transform: translateY(-50%);
+	text-align: end;
+	width: 90%;
+	padding: 1rem 1rem;
+}
+
+.box .text-box::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 115%;
+	height: 100%;
+	opacity: 1;
+	transform:translateX(-100%) scale(1);
+	transition: all .6s ease;
+
+
+}
+.box:hover .text-box::before{
+	opacity: 1;
+    transform: translateX(0) scale(1) skewX(45deg);
+	background: rgba(0,0,0,0.6);
+}
+.text h2{
+	opacity: 0;
+	transform: translateY(-100%)  scale(0);
+	transition: .5s;
+	text-transform: uppercase;
+
+
+}
+.box:hover .text h2{
+   opacity: 1;
+   transform: translateY(0) scale(1);
+}
+
+.text p{
+	opacity: 0;
+	transform: translateY(-100%)  scale(0);
+	transition: .5s;
+	
+
+
+}
+.box:hover .text p{
+   opacity: 1;
+   transform: translateY(0) scale(1);
+}
+
+.box img{
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	transform: scale(1);
+	transition:all .6s ease-out;
+
+}
+
+.box:hover img{
+	transform: scale(1.05);
+}
+
+/******************end for 1st***************************/
+
+@import url('https://fonts.googleapis.com/css?family=Vollkorn&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap');
+
+#section_2{
+	margin: 3rem auto;
+}
+.card{
+    position: relative;	
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background: #fff;
+	transform-style: preserve-3d;
+	transform: perspective(2000px);
+	transition: 1s;
+	box-shadow: inset 300px 0 50px rgba(0,0,0,0.5);
+	height: 300px;
+	margin: 1rem auto;
+    opacity: 1;
+    font-family: 'Julius Sans One', sans-serif;
+
+}
+.card:hover {
+	 transform: perspective(2000px) rotate(-10deg);
+	 cursor: pointer;
+	 box-shadow: inset 20px 0 50px rgba(0,0,0,0.5);
+}
+
+
+.card img{
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	transform: scale(1);
+	transition:all .6s ease-out;
+
+}
+.card .imgBox{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	transform-origin: left;
+	z-index: 1;
+	transition: 1s;
+}
+.card:hover .imgBox{
+	transform: rotateY(-135deg);
+}
+
+.card .details{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%:
+	height: 100%;
+	object-fit: cover;
+	padding: .8rem .5rem ;
+}
+/****************card***************************/
+
+.wrapper{
+	position: relative;
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+	height: 300px;
+    margin: 1rem auto;
+
+}
+.content{
+	position: absolute;
+	top: 0;
+	left: 0;
+
+    color: #fff;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+.content a{
+	display: inline-block;
+	margin-top: 20px;
+	padding: 1rem 1rem;
+	border: 1px solid #fff;
+	text-decoration: none;
+	color: #fff;
+}
+
+.content a:hover{
+	color: #000;
+	background: #fff;
+}
+
+.wrapper img{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	z-index: 1;
+	object-fit: cover;
+	transition: 1s;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.wrapper img:hover{
+	clip-path: polygon(0 0, 100% 0, 0 0, 0 100%);
+}
+/***********************************************/
+
+.container-section{
+	max-width: 1120px;
+	margin: 3rem auto;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	transform-style: preserve-3d;
+}
+.container-section .room{
+	position: relative;
+	width: 350px;
+	height: 300px;
+	background: #fff;
+	margin: auto .5rem;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+	transition: 0.5s;
+	overflow: hidden;
+	transform-style: preserve-3d;
+	margin: 1rem auto;
+}
+.container-section .room .img-box{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.container-section .room img{
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+}
+
+.container-section .room .content{
+	position: absolute;
+	width: 90%;
+	height: 100%;
+	top: 150%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	transition: .7s;
+	background: rgba(0,0,0,0.7);
+}
+.container-section .room:hover .content{
+   top: 60%;
+}
+
+.container-section:hover .room{
+	transform: perspective(500px) rotateY(20deg);
+}
+.container-section .room:hover{
+    transform: perspective(500px) rotateY(0deg);	
+}
+.container-section .room:hover ~.room{
+	transform: perspective(500px) rotateY(-20deg);
+}
